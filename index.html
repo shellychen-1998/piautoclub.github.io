@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title></title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+        html{
+          scroll-behavior: smooth;
+        }
+                    * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            .active {
+            background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2s;
+            animation-name: fade;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: forwards
+            }
+
+            @-webkit-keyframes fade {
+            from {opacity: 0}
+            to {opacity: 1}
+            }
+
+            @keyframes fade {
+            0%
+            {opacity: 0}
+            100%
+             {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen {
+            .text {font-size: 11px}
+            }
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 68%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color:black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: grey;
+          }
+
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+        </style>
+    </head>
+    <header id="home">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="width:200px;margin-left:0px;padding-top:5px">
+              <img src="../images/logo.jpeg" style="width:150px;height:40px;">
+              <!-- <h5>PI AUTO Club</h5>; -->
+            </a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#business">Business <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+              </ul>
+            </li> -->
+            <li><a href="#business">Business</a></li>
+            <li><a href="#lease">Lease</a></li>
+            <li><a href="#repaire">Repaire</a></li>
+            <li><a href="#detailing">Detailing</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <body>
+        <!-- <div class="flex-center position-ref full-height"> -->
+            <!-- @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif -->
+
+
+
+          <div>
+            <!-- <div class="row">
+            <div class="col-lg-1">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            </div> -->
+  <!-- Full-width images with number and caption text -->
+            <!-- <div class="col-lg-10"> -->
+            <div class="mySlides fade">
+            <div class="container" style="padding-right:90px;padding-left:90px">
+              <img src="../images/cargre.jpg" style="width:100%;height:750px;">
+            </div>
+            </div>
+
+            <div class="mySlides fade">
+            <div class="container" style="padding-right:90px;padding-left:90px">
+              <img src="../images/carblue.jpg" style="width:100%;height:750px;">
+            </div>
+            </div>
+
+            <div class="mySlides fade">
+            <div class="container" style="padding-right:90px;padding-left:90px">
+              <img src="../images/carwhi.jpg" style="width:100%;height:750px;">
+            </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="container" style="padding-right:90px;padding-left:90px">
+              <img src="../images/sss.jpg" style="width:100%;height:750px;">
+            </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+          <!-- The dots/circles -->
+          <div style="text-align:center;margin-bottom:15px" >
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+
+
+            <div class="row" style="margin:0px" id="business">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:0px;radius:20%">
+                <img src="../images/dada.jpg" style="width:100%;height:600px;">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:15px">
+                <h2 style="color:#ccddff;margin-top:0px">Business</h2>
+                <p>this section is for description of our business</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin:0px" id="lease">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:15px">
+                <h2 style="color:#c2c2d6;margin-top:15px;">Lease</h2>
+                <p>this section will display our details about car leasing</p>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:0px;radius:20%">
+                <img src="../images/sliver.jpg" style="width:100%;height:600px">
+              </div>
+            </div>
+
+            <div class="row" style="margin:0px" id="repaire">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:0px;radius:20%">
+                <img src="../images/bbb.jpg" style="width:100%;height:600px">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:15px">
+                <h2 style="color:#ccddff;margin-top:0px">Repaire</h2>
+                <p>this section shows how we repaire the car</p>
+              </div>
+            </div>
+
+            <div class="row" style="margin:0px" id="detailing">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:15px">
+                <h2 style="color:#c2c2d6;margin-top:15px;">Detailing</h2>
+                <p>this section will display our details about car leasing</p>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding:0px;radius:20%">
+                <img src="../images/gtr.jpg" style="width:100%;height:600px">
+              </div>
+            </div>
+
+            <div id="map" style="height:400px;width:100%;border:black solid">
+
+            </div>
+
+
+
+            <footer class="page-footer font-small" style="background-color:#636b6f;">
+              <div class="container">
+                <ul class="list-unstyled">
+                  <div class="row" style="padding-top:9px">
+                    <div class="col-lg-3" style="margin-top:6px">
+                      <li>
+                        <a href="#home" style="color:white">Home</a>
+                      </li>
+                      <li>
+                        <a href="#business"style="color:white">Business</a>
+                      </li>
+                      <li>
+                        <a href="#lease"style="color:white">Lease</a>
+                      </li>
+                    </div>
+                    <div class="col-lg-3" style="margin-top:6px">
+                      <li>
+                        <a href="#repaire"style="color:white">Repaire</a>
+                      </li>
+                      <li>
+                        <a href="#detailing"style="color:white">Detailing</a>
+                      </li>
+                    </div>
+                    <div class="col-lg-4">
+                      <img src="../images/logo.jpeg" alt="" style="height:100px;width:300px;margin-top:5px;">
+                    </div>
+                    <div class="col-lg-2" style="padding:0px">
+                      <p style="color:white">Address:102-5950 Imperial St.</p>
+
+                      <p style="color:white">Phone Number:(778)888-8851</p>
+
+                      <p style="color:white">Email:info@piautoclub.com</p>
+                    </div>
+                    </div>
+
+                </ul>
+
+      </div>
+      <!-- Grid column -->
+
+            </footer>
+
+            <div style="height:50px;background-color:grey;opacity:0.7;padding-top:16px">
+             <p style="text-align:center;color:black">©2018 Coastline Precision Consultant Ltd.| All rights reserved</p>
+            </div>
+
+        <!-- </div> -->
+        <!-- <img src="https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg" alt="dog" style="width:100%"> -->
+        <script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.674, lng: -73.945},
+          zoom: 12,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
+          </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4rTD3uWhGJBRyE0NJrCtHrrSGnlnQoDA&callback=initMap">
+    </script>
+
+    </body>
+</html>
