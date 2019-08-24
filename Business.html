@@ -1,0 +1,1175 @@
+---
+redirect_from: "/Carp.html/"
+---
+redirect_from: "/Business.html/"
+---
+<!DOCTYPE html>
+
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title></title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+        html{
+          scroll-behavior: smooth;
+
+          height:100%;
+        }
+                    * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            .active {
+            background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2s;
+            animation-name: fade;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: forwards
+            }
+
+            @-webkit-keyframes fade {
+            from {opacity: 0}
+            to {opacity: 1}
+            }
+
+            @keyframes fade {
+            0%
+            {opacity: 0}
+            100%
+             {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen {
+            .text {font-size: 11px}
+            }
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color:black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: grey;
+            opacity: 0.4;
+          }
+
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+
+
+        .block {
+        height: 5em;
+        line-height: 5em;
+        width: 10em;
+        background: #464646;
+        color: #fdfdfd;
+        text-align: center;
+        margin: 1em auto;
+        text-shadow: 0 0 1px #333; /* so one can see fadeBgColor properly */
+        }
+
+        .animatable {
+
+        /* initially hide animatable objects */
+        visibility: hidden;
+
+        /* initially pause animatable objects their animations */
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+        }
+
+        /* show objects being animated */
+        .animated {
+        visibility: visible;
+
+        -webkit-animation-fill-mode: both;
+        -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -ms-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        animation-duration: 1s;
+
+        -webkit-animation-play-state: running;
+        -moz-animation-play-state: running;
+        -ms-animation-play-state: running;
+        -o-animation-play-state: running;
+        animation-play-state: running;
+        }
+
+        /* CSS Animations (extracted from http://glifo.uiparade.com/) */
+        @-webkit-keyframes fadeInDown {
+        0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        }	100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        }
+        }
+
+        @-moz-keyframes fadeInDown {
+        0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+        }
+
+        100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        }
+        }
+
+        @-o-keyframes fadeInDown {
+        0% {
+        opacity: 0;
+        -o-transform: translateY(-20px);
+        }
+
+        100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+        }
+        }
+
+        @keyframes fadeInDown {
+        0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        }
+        100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+
+
+
+        @-webkit-keyframes fadeIn {
+        0% {
+        opacity: 0;
+        }
+        20% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+        }
+
+        @-moz-keyframes fadeIn {
+        0% {
+        opacity: 0;
+        }
+        20% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+        }
+
+        @-o-keyframes fadeIn {
+        0% {
+        opacity: 0;
+        }
+        20% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+        }
+
+        @keyframes fadeIn {
+        0% {
+        opacity: 0;
+        }
+        60% {
+        opacity: 0;
+        }
+        20% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+        }
+        @-webkit-keyframes bounceInLeft {
+        0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        }
+        60% {
+        -webkit-transform: translateX(20px);
+        }
+
+        80% {
+        -webkit-transform: translateX(-5px);
+        }
+
+        100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        }
+        }
+
+        @-moz-keyframes bounceInLeft {
+        0% {
+        opacity: 0;
+        -moz-transform: translateX(-2000px);
+        }
+
+        60% {
+        -moz-transform: translateX(20px);
+        }
+
+        80% {
+        -moz-transform: translateX(-5px);
+        }
+
+        100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+        }
+        }
+
+        @-o-keyframes bounceInLeft {
+        0% {
+        opacity: 0;
+        -o-transform: translateX(-2000px);
+        }
+
+        60% {
+        opacity: 1;
+        -o-transform: translateX(20px);
+        }
+
+        80% {
+        -o-transform: translateX(-5px);
+        }
+
+        100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+        }
+        }
+
+        @keyframes bounceInLeft {
+        0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+        }
+
+        60% {
+        transform: translateX(20px);
+        }
+
+        80% {
+        transform: translateX(-5px);
+        }
+
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+        }
+        @-webkit-keyframes bounceInRight {
+        0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+        }
+
+        60% {
+        -webkit-transform: translateX(-20px);
+        }
+
+        80% {
+        -webkit-transform: translateX(5px);
+        }
+
+        100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        }
+        }
+
+        @-moz-keyframes bounceInRight {
+        0% {
+        opacity: 0;
+        -moz-transform: translateX(2000px);
+        }
+
+        60% {
+        -moz-transform: translateX(-20px);
+        }
+
+        80% {
+        -moz-transform: translateX(5px);
+        }
+
+        100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+        }
+        }
+
+        @-o-keyframes bounceInRight {
+        0% {
+        opacity: 0;
+        -o-transform: translateX(2000px);
+        }
+
+        60% {
+        -o-transform: translateX(-20px);
+        }
+
+        80% {
+        -o-transform: translateX(5px);
+        }
+
+        100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+        }
+        }
+
+        @keyframes bounceInRight {
+        0% {
+        opacity: 0;
+        transform: translateX(2000px);
+        }
+
+        60% {
+        transform: translateX(-20px);
+        }
+
+        80% {
+        transform: translateX(5px);
+        }
+
+        100% {
+        opacity: 1;
+        transform: translateX(0);
+        }
+        }
+        @-webkit-keyframes fadeInUp {
+        0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        }	100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        }
+        }
+
+        @-moz-keyframes fadeInUp {
+        0% {
+        opacity: 0;
+        -moz-transform: translateY(20px);
+        }
+
+        100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        }
+        }
+
+        @-o-keyframes fadeInUp {
+        0% {
+        opacity: 0;
+        -o-transform: translateY(20px);
+        }
+
+        100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+        }
+        }
+
+        @keyframes fadeInUp {
+        0% {
+        opacity: 0;
+        transform: translateY(20px);
+        }
+
+        100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+        @-webkit-keyframes bounceIn {
+        0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+        }
+        50% {
+        -webkit-transform: scale(1.05);
+        }
+
+        70% {
+        -webkit-transform: scale(.9);
+        }
+
+        100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        }
+        }
+
+        @-moz-keyframes bounceIn {
+        0% {
+        opacity: 0;
+        -moz-transform: scale(.3);
+        }
+
+        50% {
+        -moz-transform: scale(1.05);
+        }
+
+        70% {
+        -moz-transform: scale(.9);
+        }
+
+        100% {
+        opacity: 1;
+        -moz-transform: scale(1);
+        }
+        }
+
+        @-o-keyframes bounceIn {
+        0% {
+        opacity: 0;
+        -o-transform: scale(.3);
+        }
+
+        50% {
+        -o-transform: scale(1.05);
+        }
+
+        70% {
+        -o-transform: scale(.9);
+        }
+
+        100% {
+        opacity: 1;
+        -o-transform: scale(1);
+        }
+        }
+
+        @keyframes bounceIn {
+        0% {
+        opacity: 0;
+        transform: scale(.3);
+        }
+
+        50% {
+        transform: scale(1.05);
+        }
+
+        70% {
+        transform: scale(.9);
+        }
+
+        100% {
+        opacity: 1;
+        transform: scale(1);
+        }
+        }
+        @-webkit-keyframes moveUp {
+        0% {
+        opacity: 1;
+        -webkit-transform: translateY(40px);
+        }	100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        }
+        }
+
+        @-moz-keyframes moveUp {
+        0% {
+        opacity: 1;
+        -moz-transform: translateY(40px);
+        }
+
+        100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        }
+        }
+
+        @-o-keyframes moveUp {
+        0% {
+        opacity: 1;
+        -o-transform: translateY(40px);
+        }
+
+        100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+        }
+        }
+
+        @keyframes moveUp {
+        0% {
+        opacity: 1;
+        transform: translateY(40px);
+        }
+
+        100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+        }
+
+        @-webkit-keyframes fadeBgColor {
+        0%{
+        background:none;
+        }
+        70%{
+        background:none;
+        }
+        100%{
+        background:#464646;
+        }
+        }
+        @-o-keyframes fadeBgColor {
+        0%{
+        background:none;
+        }
+        70%{
+        background:none;
+        }
+        100%{
+        background:#464646;
+        }
+        }
+        @keyframes fadeBgColor {
+        0%{
+        background:none;
+        }
+        70%{
+        background:none;
+        }
+        100%{
+        background:#464646;
+        }
+        }
+
+        .animated.animationDelay{
+        animation-delay:.4s;
+        -webkit-animation-delay:.4s;
+        }
+        .animated.animationDelayMed{
+        animation-delay:1.2s;
+        -webkit-animation-delay:1.2s;
+        }
+        .animated.animationDelayLong{
+        animation-delay:1.6s;
+        -webkit-animation-delay:1.6s;
+        }
+        .animated.fadeBgColor {
+        -webkit-animation-name: fadeBgColor;
+        -moz-animation-name: fadeBgColor;
+        -o-animation-name: fadeBgColor;
+        animation-name: fadeBgColor;
+        }
+        .animated.bounceIn {
+        -webkit-animation-name: bounceIn;
+        -moz-animation-name: bounceIn;
+        -o-animation-name: bounceIn;
+        animation-name: bounceIn;
+        }
+        .animated.bounceInRight {
+        -webkit-animation-name: bounceInRight;
+        -moz-animation-name: bounceInRight;
+        -o-animation-name: bounceInRight;
+        animation-name: bounceInRight;
+        }
+        .animated.bounceInLeft {
+        -webkit-animation-name: bounceInLeft;
+        -moz-animation-name: bounceInLeft;
+        -o-animation-name: bounceInLeft;
+        animation-name: bounceInLeft;
+        }
+        .animated.fadeIn {
+        -webkit-animation-name: fadeIn;
+        -moz-animation-name: fadeIn;
+        -o-animation-name: fadeIn;
+        animation-name: fadeIn;
+        }
+        .animated.fadeInDown {
+        -webkit-animation-name: fadeInDown;
+        -moz-animation-name: fadeInDown;
+        -o-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+        }
+        .animated.fadeInUp {
+        -webkit-animation-name: fadeInUp;
+        -moz-animation-name: fadeInUp;
+        -o-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        }
+        .animated.moveUp {
+        -webkit-animation-name: moveUp;
+        -moz-animation-name: moveUp;
+        -o-animation-name: moveUp;
+        animation-name: moveUp;
+        }
+
+        .images{
+
+        }
+
+
+        .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        }
+
+        .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: grey;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: 1s ease ;
+        opacity: 0.7
+        }
+
+
+        .text {
+        white-space: nowrap;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        }
+        .frame {
+        background-color:#ddc;
+        border:solid 5vmin #eee;
+        border-bottom-color:#fff;
+        border-left-color:#eee;
+        border-radius:2px;
+        border-right-color:#eee;
+        border-top-color:#ddd;
+        box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+        box-sizing:border-box;
+        margin:10vh 10vw;
+        height:80vh;
+        padding:8vmin;
+        position:relative;
+        text-align:center;
+        height:1000px;
+        &:before {
+        border-radius:2px;
+        bottom:-2vmin;
+        box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+        content:"";
+        left:-2vmin;
+        position:absolute;
+        right:-2vmin;
+        top:-2vmin;
+        }
+        &:after {
+        border-radius:2px;
+        bottom:-2.5vmin;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+        content:"";
+        left:-2.5vmin;
+        position:absolute;
+        right:-2.5vmin;
+        top:-2.5vmin;
+        }
+        }
+        @media (max-width:992px) {
+        .frame{
+        height:670px;
+        }
+        }
+        @media (max-width:650px) {
+        .frame{
+        height:600px
+        }
+        }
+        @media (max-width:380px) {
+        .frame{
+        height:375px
+        }
+        }
+        img {
+        border:solid 2px;
+        border-bottom-color:#ffe;
+        border-left-color:#eed;
+        border-right-color:#eed;
+        border-top-color:#ccb;
+        max-height:100%;
+        max-width:100%;
+        }
+        .imgs{
+        width:100%;
+        height:100%;
+        }
+
+        .container{
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 150px;
+        padding-left:150px;
+        }
+        @media (max-width:1200px) {
+        .container{
+        padding-right: 100px;
+        padding-left: 100px;
+        }
+        }
+        @media (max-width:1000px) {
+        .container{
+        padding-right: 50px;
+        padding-left: 50px;
+        }
+        }
+        @media (max-width:750px) {
+        .container{
+        padding-right: 15px;
+        padding-left: 15px;
+        }
+        }
+        @media (mx-width:500px) {
+        .container{
+        padding-left: auto;
+        padding-right: auto;
+        }
+        }
+        .container:hover .overlay {
+        bottom: 0;
+        height: 100%;
+        }
+
+        </style>
+    </head>
+    <header id="home">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="width:200px;margin-left:0px;padding-top:10px">
+              <img src="/images/logo.jpeg" style="width:150px;height:40px;">
+            </a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/index.html">Home</a></li>
+            <li><a href="/Business.html">Business</a></li>
+            <li><a href="/Carp.html">Car Picture</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <body>
+
+      <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="container animatable bounceIn frame" style="padding:0px;height:400px;width:400px;margin-top:0px">
+                <img src="/images/dada.jpg" style="width:100%;height:100%">
+                <div class="overlay">
+                  <div class="text">
+                    <h3><a href="#Business" style="color:white">Our Business</a></h3>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg-6 col-md-6 cold-sm-6">
+                <div class="container animatable bounceInLeft frame" style="padding:0px;height:400px;width:400px;margin-top:0px;margin-left:10px">
+                  <img src="/images/sliver.jpg" style="width:100%;height:100%">
+                  <div class="overlay">
+                    <div class="text">
+                      <h3><a href="#Leasing" style="color:white">Leasing Plan</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="">
+                      <div class="container animatable bounceIn frame" style="padding:0px;height:400px;width:400px;margin-top:0px">
+                        <img src="/images/bbb.jpg" style="width:100%;height:100%">
+                        <div class="overlay">
+                          <div class="text">
+                            <h3><a href="#Detailing" style="color:white">Detailing Service</a></h3>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 cold-sm-6"style="" id="lease">
+                        <div class="container animatable bounceInLeft frame" style="padding:0px;height:400px;width:400px;margin-top:0px;margin-left:10px">
+                          <img src="/images/gtr.jpg" style="width:100%;height:100%">
+                          <div class="overlay">
+                            <div class="text">
+                              <h3><a href="#Repaire" style="color:white">Repaire Service</a></h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <section>
+                        <div class="container"id="Business">
+                          <h3>Our Business</h3>
+                          <p>This section is for Business</p>
+                        </div>
+                        <div class="container" id="Leasing">
+                          <h3>Leasing plan</h3>
+                          <p>This section is for Leasing</p>
+                        </div>
+                        <div class="container" id="Detailing">
+                          <h3>Detailing Service</h3>
+                          <p>This section is for Detailing</p>
+                        </div>
+                        <div class="container" id="Repaire">
+                          <h3>Repaire Service</h3>
+                          <p>This section is for Repairing</p>
+                        </div>
+                      </section>>
+
+
+
+
+            <footer class="page-footer font-small" style="background-color:#636b6f;">
+              <div class="container">
+                <ul class="list-unstyled">
+                  <div class="row" style="padding-top:9px">
+                    <div class="col-lg-6" style="margin-top:24px">
+                      <li>
+                        <a href="/index.html" style="color:white">Home</a>
+                      </li>
+                      <li>
+                        <a href="/Business.html"style="color:white">Business</a>
+                      </li>
+                      <li>
+                        <a href="/Carp.html"style="color:white">Car picture</a>
+                      </li>
+                    </div>
+
+                    <br>
+                    <div class="col-lg-4">
+                      <img src="/images/logo.jpeg" alt="" style="height:100px;width:300px;margin-top:5px;">
+                    </div>
+                    <br>
+                    <div class="col-lg-2" style="margin-top:-18px">
+                      <p style="color:white">&#160;&#160;&#160;&#160;Address: 102-5950 Imperial St.</p>
+
+                      <p style="color:white">&#160;&#160;&#160;&#160;Phone Number: (778)888-8857</p>
+
+                      <p style="color:white">&#160;&#160;&#160;&#160;Email: info@piautoclub.com</p>
+                    </div>
+                    </div>
+
+                </ul>
+
+      </div>
+      <!-- Grid column -->
+
+            </footer>
+
+            <div style="height:50px;background-color:grey;opacity:0.7;padding-top:16px">
+             <p style="text-align:center;color:black">©2018 Coastline Precision Consultant Ltd.| All rights reserved</p>
+            </div>
+
+        <!-- </div> -->
+        <!-- <img src="https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg" alt="dog" style="width:100%"> -->
+        <script>
+
+        // Trigger CSS animations on scroll.
+        // Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+        // Looking for a version that also reverses the animation when
+        // elements scroll below the fold again?
+        // --> Check https://codepen.io/bramus/pen/vKpjNP
+
+        jQuery(function($) {
+
+          // Function which adds the 'animated' class to any '.animatable' in view
+          var doAnimations = function() {
+
+            // Calc current offset and get all animatables
+            var offset = $(window).scrollTop() + $(window).height(),
+                $animatables = $('.animatable');
+
+            // Unbind scroll handler if we have no animatables
+            if ($animatables.length == 0) {
+              $(window).off('scroll', doAnimations);
+            }
+
+            // Check all animatables and animate them if necessary
+        		$animatables.each(function(i) {
+               var $animatable = $(this);
+        			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+                $animatable.removeClass('animatable').addClass('animated');
+        			}
+            });
+
+        	};
+
+          // Hook doAnimations on scroll, and trigger a scroll
+        	$(window).on('scroll', doAnimations);
+          $(window).trigger('scroll');
+
+        });
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.674, lng: -73.945},
+          zoom: 4,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
+          </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4rTD3uWhGJBRyE0NJrCtHrrSGnlnQoDA&callback=initMap">
+    </script>
+
+    </body>
+</html>
