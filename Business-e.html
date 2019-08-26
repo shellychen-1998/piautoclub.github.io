@@ -873,153 +873,8 @@
         bottom: 0;
         height: 100%;
         }
-        .row > .column {
-  padding: 0 8px;
-}
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create four equal columns that floats next to eachother */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 600px;
-  max-height:600px
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 50px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-@media (max-width:600px) {
-  .prev,.next{
-    top:39%;
-  }
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Caption text */
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-.rotateimg90 {
-  -webkit-transform:rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-    </style>
+        </style>
     </head>
     <header id="home">
       <nav class="navbar navbar-inverse">
@@ -1030,254 +885,88 @@ img.hover-shadow {
             </a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/index.html">Home</a></li>
-            <li><a href="/Business.html">Business</a></li>
-            <li><a href="/Carp.html">Car Picture</a></li>
+            <li class="active"><a href="/index-e.html">主页</a></li>
+            <li><a href="/Business-e.html">商业</a></li>
+            <li><a href="/Carp-e.html">车辆展示</a></li>
           </ul>
         </div>
       </nav>
       <div class="row"style="height:30px;display:block">
         <div class="col-lg-1 col-md-2 col-sm-2" style="padding-left:45px;">
-          <a href="#">English</a>
+          <a href="/Business.html">英文</a>
         </div>
         <div class="col-lg-1 col-md-2 col-sm-2" style="padding-left:45px">
-          <a href="Carp-e.html">Mandarin</a>
+          <a href="#">中文</a>
         </div>
       </div>
     </header>
 
 
     <body>
+
       <div class="row" style="padding-top:30px">
-  <div class="column">
-    <img id="myImg"src="/images/bbb.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/carblue.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/cargre.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/dada.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/gtr.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/niu.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow rotateimg90">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/pink.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow rotateimg90">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/sliver.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/sss.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/1.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/2.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/3.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/4.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/5.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/6.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/7.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/8.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/9.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/10.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/11.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/12.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/13.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/14.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/15.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img id="myImg"src="/images/16.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow">
-  </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="container animatable bounceIn frame" style="padding:0px;height:400px;width:400px;margin-top:0px">
+                <img src="/images/dada.jpg" style="width:100%;height:100%">
+                <div class="overlay">
+                  <div class="text">
+                    <h3><a href="#Business" style="color:white">我们的服务</a></h3>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg-6 col-md-6 cold-sm-6">
+                <div class="container animatable bounceInLeft frame" style="padding:0px;height:400px;width:400px;margin-top:0px;margin-left:10px">
+                  <img src="/images/sliver.jpg" style="width:100%;height:100%">
+                  <div class="overlay">
+                    <div class="text">
+                      <h3><a href="#Leasing" style="color:white">租赁</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
 
-
-</div>
-
-<!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 5</div>
-      <img src="/images/bbb.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 5</div>
-      <img src="/images/carblue.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 5</div>
-      <img src="/images/cargre.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 5</div>
-      <img src="/images/dada.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/gtr.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/niu.jpg" style="width:100%" class="rotateimg90">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/pink.jpg" style="width:100%" class="rotateimg90">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/sliver.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/sss.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/1.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/2.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/3.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/4.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/5.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/6.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/7.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/8.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/9.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/10.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/11.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/12.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/13.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/14.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/15.jpg" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <div class="numbertext">5 / 5</div>
-      <img src="/images/16.jpg" style="width:100%">
-    </div>
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <!-- Thumbnail image controls -->
-    <!-- <div class="column">
-      <img class="demo" src="/images/bbb.jpg" onclick="currentSlide(1)" alt="">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="/images/carblue.jpg" onclick="currentSlide(2)" alt="">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="/images/cargre.jpg" onclick="currentSlide(3)" alt="">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="/images/dada.jpg" onclick="currentSlide(4)" alt="">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="/images/gtr.jpg" onclick="currentSlide(5)" alt="">
-    </div> -->
-
-
-  </div>
-  <a class="prev" onclick="plusSlides(1)">&#10094;</a>
-
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  <span class="close cursor" onclick="closeModal()" style="font-size:55px">&times;</span>
-
-</div>
+              <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6" style="">
+                      <div class="container animatable bounceIn frame" style="padding:0px;height:400px;width:400px;margin-top:0px">
+                        <img src="/images/bbb.jpg" style="width:100%;height:100%">
+                        <div class="overlay">
+                          <div class="text">
+                            <h3><a href="#Detailing" style="color:white">汽车美容</a></h3>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 cold-sm-6"style="" id="lease">
+                        <div class="container animatable bounceInLeft frame" style="padding:0px;height:400px;width:400px;margin-top:0px;margin-left:10px">
+                          <img src="/images/gtr.jpg" style="width:100%;height:100%">
+                          <div class="overlay">
+                            <div class="text">
+                              <h3><a href="#Repaire" style="color:white">汽车维修</a></h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <section>
+                        <div class="container"id="Business">
+                          <h3>我们的服务</h3>
+                          <p>This section is for Business</p>
+                        </div>
+                        <div class="container" id="Leasing">
+                          <h3>租赁</h3>
+                          <p>This section is for Leasing</p>
+                        </div>
+                        <div class="container" id="Detailing">
+                          <h3>汽车美容</h3>
+                          <p>This section is for Detailing</p>
+                        </div>
+                        <div class="container" id="Repaire">
+                          <h3>汽车维修</h3>
+                          <p>This section is for Repairing</p>
+                        </div>
+                      </section>>
 
 
 
@@ -1288,27 +977,27 @@ img.hover-shadow {
                   <div class="row" style="padding-top:9px">
                     <div class="col-lg-6" style="margin-top:24px">
                       <li>
-                        <a href="/index.html" style="color:white">Home</a>
+                        <a href="/index-e.html" style="color:white">主页</a>
                       </li>
                       <li>
-                        <a href="/Business.html"style="color:white">Business</a>
+                        <a href="/Business-e.html"style="color:white">商业</a>
                       </li>
                       <li>
-                        <a href="/Carp.html"style="color:white">Car picture</a>
+                        <a href="/Carp-e.html"style="color:white">车辆展示</a>
                       </li>
                     </div>
 
                     <br>
-                    <div class="col-lg-4" style="">
+                    <div class="col-lg-4">
                       <img src="/images/logo.jpeg" alt="" style="height:100px;width:300px;margin-top:5px;">
                     </div>
                     <br>
                     <div class="col-lg-2" style="margin-top:-18px">
-                      <p style="color:white">&#160;&#160;&#160;&#160;Address: 102-5950 Imperial St.</p>
+                      <p style="color:white">&#160;&#160;&#160;&#160;地址: 102-5950 Imperial St.</p>
 
-                      <p style="color:white">&#160;&#160;&#160;&#160;Phone Number: (778)888-8857</p>
+                      <p style="color:white">&#160;&#160;&#160;&#160;电话: (778)888-8857</p>
 
-                      <p style="color:white">&#160;&#160;&#160;&#160;Email: info@piautoclub.com</p>
+                      <p style="color:white">&#160;&#160;&#160;&#160;邮箱: info@piautoclub.com</p>
                     </div>
                     </div>
 
@@ -1326,46 +1015,13 @@ img.hover-shadow {
         <!-- </div> -->
         <!-- <img src="https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg" alt="dog" style="width:100%"> -->
         <script>
-          function openModal() {
-            document.getElementById("myModal").style.display = "block";
-          }
 
-          // Close the Modal
-          function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-          }
+        // Trigger CSS animations on scroll.
+        // Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
 
-          var slideIndex = 1;
-          showSlides(slideIndex);
-
-          // Next/previous controls
-          function plusSlides(n) {
-            showSlides(slideIndex += n);
-          }
-
-          // Thumbnail image controls
-          function currentSlide(n) {
-            showSlides(slideIndex = n);
-          }
-
-          function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var img = document.getElementById("myImg");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-          }
+        // Looking for a version that also reverses the animation when
+        // elements scroll below the fold again?
+        // --> Check https://codepen.io/bramus/pen/vKpjNP
 
         jQuery(function($) {
 
@@ -1396,15 +1052,128 @@ img.hover-shadow {
           $(window).trigger('scroll');
 
         });
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.674, lng: -73.945},
+          zoom: 4,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
           </script>
     <!--Load the API from the specified URL
     * The async attribute allows the browser to render the page while the API loads
     * The key parameter will contain your own API key (which is not needed for this tutorial)
     * The callback parameter executes the initMap() function
     -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4rTD3uWhGJBRyE0NJrCtHrrSGnlnQoDA&callback=initMap">
+    </script>
 
     </body>
 </html>
